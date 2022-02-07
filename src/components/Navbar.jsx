@@ -3,6 +3,7 @@ import {
   AppBar,
   Avatar,
   Badge,
+  Button,
   InputBase,
   makeStyles,
   Toolbar,
@@ -66,12 +67,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Navbar = () => {
+const Navbar = ({toggleDrawer}) => {
   const [open, setOpen] = useState(false);
   const classes = useStyles({ open });
   return (
     <AppBar position="fixed">
       <Toolbar className={classes.toolbar}>
+      <Button
+        style={{ backgroundColor: "red" }}
+        onClick={ toggleDrawer}
+      >
+        sdsadaasdsd
+      </Button>
         <Typography variant="h6" className={classes.logoLg}>
           Lama Dev
         </Typography>
